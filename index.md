@@ -82,7 +82,7 @@ td {
 
 </style>
 
-<script type=text/javascript>
+<script>
 
 const MAX_PAGE = 1000;
 const DEFAULT_NAME = "EXP Babyfaced";
