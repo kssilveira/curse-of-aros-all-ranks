@@ -59,7 +59,7 @@
 
 <p>Author: <a href="https://kaue.me">https://kaue.me</a></p>
 
-<p>Data from <a href="https://www.curseofaros.com">https://www.curseofaros.com</a></p>
+<p>Data from <a href="https://curseofaros.com">https://curseofaros.com</a></p>
 
 <style>
 
