@@ -5,7 +5,7 @@
   <input type="text" id="name" name="name" value=""/>
   <input type="submit" value="Find"/>
 </form>
-
+<br/>
 <table id="table">
   <tr>
     <th>Name</th>
@@ -57,7 +57,7 @@
   </tr>
 </table>
 
-<p>Author: <a href="https://kaue.me">https://kaue.me</a></p>
+<p>Made by <a href="https://kaue.me">https://kaue.me</a></p>
 
 <p>Data from <a href="https://curseofaros.com">https://curseofaros.com</a></p>
 
