@@ -5,7 +5,6 @@
   <input type="text" id="name" name="name" value=""/>
   <input type="submit" value="Find"/>
 </form>
-<br/>
 <table id="table">
   <tr>
     <th>Name</th>
