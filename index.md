@@ -14,7 +14,19 @@
     <th>Page</th>
   </tr>
   <tr>
-    <td class="left">XP</td>
+    <td class="left">Overall</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="left">Melee</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="left">Magic</td>
     <td></td>
     <td></td>
     <td></td>
@@ -85,13 +97,13 @@ td {
 <script>
 
 const MAX_PAGE = 1000;
-const DEFAULT_NAME = "EXP Babyfaced";
+const DEFAULT_NAME = "Bot";
 const INDEX = {
   "rank": 1,
   "xp": 2,
   "page": 3,
 };
-const skills = ["melee", "mining", "smithing", "woodcutting", "crafting", "fishing", "cooking"];
+const skills = ["overall", "melee", "magic", "mining", "smithing", "woodcutting", "crafting", "fishing", "cooking"];
 
 function byId(id) {
   return document.getElementById(id);
