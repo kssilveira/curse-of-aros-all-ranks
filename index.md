@@ -67,6 +67,12 @@
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <td class="left">Tailoring</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
 
 <p>Made by <a href="https://kaue.me">https://kaue.me</a></p>
@@ -103,7 +109,7 @@ const INDEX = {
   "xp": 2,
   "page": 3,
 };
-const skills = ["overall", "melee", "magic", "mining", "smithing", "woodcutting", "crafting", "fishing", "cooking"];
+const skills = ["overall", "melee", "magic", "mining", "smithing", "woodcutting", "crafting", "fishing", "cooking", "tailoring"];
 
 function byId(id) {
   return document.getElementById(id);
