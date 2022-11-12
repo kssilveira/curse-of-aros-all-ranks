@@ -1,3 +1,4 @@
+---
 # Curse of Aros - All Ranks
 
 <form onsubmit="search()">
@@ -90,7 +91,7 @@ const INDEX = {
   "xp": 2,
   "page": 3,
 };
-const skills = ["", "mining", "smithing", "woodcutting", "crafting", "fishing", "cooking"];
+const skills = ["melee", "mining", "smithing", "woodcutting", "crafting", "fishing", "cooking"];
 
 function byId(id) {
   return document.getElementById(id);
@@ -114,7 +115,8 @@ let search = async () => {
     let rank = 0;
     for (let page = 0; page < MAX_PAGE; page++) {
       setCell(row, "page", page + 1);
-      const url = "https://www.curseofaros.com/highscores" + suffix + ".json?p=" + page;
+      const lw = "0";
+      const url = "https://www.curseofaros.com/highscores" + suffix + ".json?p=" + page + "&lw=" + lw;
       const response = await fetch(url);
       const json = await response.json();
       for (let i = 0; i < json.length; i++) {
