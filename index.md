@@ -4,7 +4,7 @@
 <form onsubmit="search()">
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" value=""/><br/>
-  <input type="checkbox" id="lw" name="lw"/><label for="lw">Lone Wolf</label><br/>
+  <input type="checkbox" id="lw" name="lw"/>&nbsp;<label for="lw">Lone Wolf</label><br/>
   <input type="submit" value="Find"/>
 </form>
 <table id="table">
@@ -83,6 +83,7 @@
 <style>
 
 table {
+  padding: 2px;
   border-collapse: collapse;
 }
 
