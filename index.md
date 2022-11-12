@@ -3,7 +3,8 @@
 
 <form onsubmit="search()">
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" value=""/>
+  <input type="text" id="name" name="name" value=""/><br/>
+  <input type="checkbox" id="lw" name="lw"/><label for="lw">Lone Wolf</label><br/>
   <input type="submit" value="Find"/>
 </form>
 <table id="table">
@@ -104,6 +105,7 @@ td {
 
 const MAX_PAGE = 1000;
 const DEFAULT_NAME = "Bot";
+const DEFAULT_LW = "0";
 const INDEX = {
   "rank": 1,
   "xp": 2,
@@ -122,6 +124,7 @@ function setCell(row, index, value) {
 let search = async () => {
   const name = byId("name").value;
   const table = byId("table");
+  const lw = byId("lw").checked ? "1" : "0";
 
   for (let i = 0; i < skills.length; i++) {
     const row = table.rows[i + 1];
@@ -133,7 +136,6 @@ let search = async () => {
     let rank = 0;
     for (let page = 0; page < MAX_PAGE; page++) {
       setCell(row, "page", page + 1);
-      const lw = "0";
       const url = "https://www.curseofaros.com/highscores" + suffix + ".json?p=" + page + "&lw=" + lw;
       const response = await fetch(url);
       const json = await response.json();
@@ -159,9 +161,10 @@ let search = async () => {
 };
 
 function main() {
-  let name = DEFAULT_NAME;
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
+
+  let name = DEFAULT_NAME;
   if (urlParams.has("name")) {
     got = urlParams.get("name");
     if (got != "") {
@@ -169,6 +172,16 @@ function main() {
     }
   }
   byId("name").value = name;
+
+  let lw = DEFAULT_LW;
+  if (urlParams.has("lw")) {
+    got = urlParams.get("lw");
+    if (got != "") {
+      lw = got;
+    }
+  }
+  byId("lw").checked = lw == "on";
+
   search();
 }
 
